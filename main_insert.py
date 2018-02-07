@@ -9,5 +9,8 @@ URL = "https://bitbucket.org/dashboard/repositories"
 
 session_requests = requests.session()
 
-print "Select ticket"
+htmls = requests.get("http://www.12306.cn/mormhweb/")
+htmls.encoding = "utf-8"
+
+print htmls.text
 
